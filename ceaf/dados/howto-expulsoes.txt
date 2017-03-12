@@ -1,0 +1,26 @@
+####################################################################################################
+
+# http://www.portaltransparencia.gov.br/downloads/snapshot.asp?c=expulsoes#get
+
+Cadastro de Expulsões da Administração Federal (CEAF)
+
+ Nesta seção estão disponíveis informações, em formato aberto, sobre os servidores civis do Poder Executivo Federal punidos com as penalidades de demissão, destituição ou cassação de aposentadoria.
+Os arquivos abaixo apresentam:
+
+NOME; CPF; MATRICULA; ORGAO; UF; CARGO; FUNCAO; ATIVIDADE; PORTARIA; DATA_PUBLICACAO; PAGINA; SECAO; PUNICAO; PAD; e FUNDAMENTO.
+Atualização dos arquivos: Mensal
+Modelo do nome do arquivo: AAAAMM_expulsoes.csv
+Origem das informações: Controladoria-Geral da União - CGU
+
+####################################################################################################
+
+unzip 20170310_expulsoes.zip
+
+iconv -f iso-8859-1 -t utf-8 20170310_expulsoes.csv > 20170310_expulsoes_utf8.csv
+
+cat 20170310_expulsoes_utf8.csv | tr -d '\0' > 20170310_expulsoes_tratado.csv
+
+####################################################################################################
+
+####################################################################################################
+
