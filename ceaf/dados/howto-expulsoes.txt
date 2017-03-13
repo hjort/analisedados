@@ -16,11 +16,15 @@ Origem das informações: Controladoria-Geral da União - CGU
 
 unzip 20170310_expulsoes.zip
 
-iconv -f iso-8859-1 -t utf-8 20170310_expulsoes.csv > 20170310_expulsoes_utf8.csv
+iconv -f iso-8859-1 -t utf-8 20170310_expulsoes.csv > 20170310_expulsoes_utf8.tsv
 
-cat 20170310_expulsoes_utf8.csv | tr -d '\0' > 20170310_expulsoes_tratado.csv
+cat 20170310_expulsoes_utf8.tsv | tr -d '\0' > 20170310_expulsoes_tratado.tsv
+
+./tsv2csv.py < 20170310_expulsoes_tratado.tsv > 20170310_expulsoes_tratado.csv
 
 ####################################################################################################
+
+https://us.qlikcloud.com/view/58c5e220bc8bbb00014fe851
 
 ####################################################################################################
 
